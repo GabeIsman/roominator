@@ -2,8 +2,6 @@ class RoomController < ApplicationController
 
   OVERFLOW_VALUE = 255
 
-  before_filter :start_worker_thread, :only => :report
-
   def index
     @rooms = Room.all
   end
@@ -26,7 +24,7 @@ class RoomController < ApplicationController
       #current_room.add_or_extend(new_reserved_button_presses)
       current_room.db_add_or_extend(new_reserved_button_presses)
     else
-      current_room.refresh_cache
+      #current_room.refresh_cache
     end
     
     #current_room.reserved_button_presses = new_reserved_button_presses
@@ -63,6 +61,9 @@ class RoomController < ApplicationController
       room.calendar_id   = params["text_c_id_#{row}"]
       room.room_name     = params["text_r_name_#{row}"]
       room.room_number   = params["text_r_number_#{row}"]
+      room.reserved_button_presses = 0
+      room.cancel_button_presses = 0
+      room.last_refresh = 0
       room.save!
     end
     

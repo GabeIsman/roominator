@@ -2,22 +2,16 @@ one:
   calendar_name: "Atlantis (np)"
   room_name: Atlantis
   room_number: 1
-  calendar_id: gisman%40oberlin.edu
+  calendar_id: rapleaf.com_31383431333930372d323138@resource.calendar.google.com
   reserved_button_presses: 0
   cancel_button_presses: 0
+  last_refresh: 0
 
 two:
   calendar_name: "Thule (np)"
   room_name: Thule
   room_number: 2
-  calendar_id: gisman%40oberlin.edu
+  calendar_id: rapleaf.com_2d31323333323538383233@resource.calendar.google.com
   reserved_button_presses: 0
   cancel_button_presses: 0
-
-three:
-  calendar_name: "N America (p+proj)"
-  room_name: "North America"
-  room_number: 3
-  calendar_id: gisman%40oberlin.edu
-  reserved_button_presses: 0
-  cancel_button_presses: 0
+  last_refresh: 0
